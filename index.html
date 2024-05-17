@@ -21,12 +21,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
 <style>
 
-    .slide {
-        width: calc( 100% / 6);
-        float: left;
-        transition: width 0.5s ease;
-
+.slider {
+        display: flex;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Snap to each slide */
     }
+
+    .slide {
+        width: 170px;
+        flex-shrink: 0; /* Prevent slides from shrinking */
+        scroll-snap-align: start; /* Ensure snapping to the start of each slide */
+        float:inline-end;
+        transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        margin-right: 10px; /* Add some spacing between slides */
+    }
+
     .slide.active {
         width: 600px !important;
         background-color: aqua !important;
@@ -550,7 +559,7 @@
 
                 <!-- Start Content -->
                 <!-- start search and slides  -->
-                <div class="container bg-red-400 my-3 bg-green-200">
+                <div class="container my-3 ">
                     <form class="flex justify-end   ">
                         <label for="search-plugins"></label>
                         <div class="w-full md:w-1/2">
@@ -564,65 +573,70 @@
                                         d="M23.3294 25.4091L14.0107 16.0343C13.2667 16.6721 12.411 17.1656 11.4437 17.5149C10.4764 17.8642 9.50418 18.0389 8.52697 18.0389C6.14398 18.0389 4.12707 17.209 2.47624 15.5492C0.825415 13.8894 0 11.8609 0 9.46352C0 7.06616 0.824422 5.03659 2.47327 3.37481C4.12211 1.71302 6.13803 0.881135 8.52102 0.879139C10.904 0.877143 12.9219 1.70753 14.5747 3.37031C16.2275 5.03309 17.0539 7.06266 17.0539 9.45902C17.0539 10.499 16.8709 11.5056 16.5048 12.4787C16.1387 13.4518 15.6576 14.2842 15.0613 14.9758L24.38 24.3492L23.3294 25.4091ZM8.52846 16.5403C10.5027 16.5403 12.1694 15.8566 13.5286 14.4893C14.8877 13.1219 15.5673 11.4447 15.5673 9.45753C15.5673 7.47037 14.8877 5.79362 13.5286 4.42727C12.1694 3.06091 10.5027 2.37724 8.52846 2.37624C6.55421 2.37524 4.88701 3.05892 3.52686 4.42727C2.16671 5.79562 1.48714 7.47237 1.48813 9.45753C1.48912 11.4427 2.1687 13.1194 3.52686 14.4878C4.88503 15.8561 6.55173 16.5398 8.52697 16.5388"
                                         fill="black" />
                                 </svg>
-                                <div class=" absolute w-full rounded-md flex flex-col gap-5 px-2 py-3 bg-white dark:bg-black  shadow-md z-10">
+                                <div id="search-container" class=" absolute w-full rounded-md   px-2 py-3 bg-white dark:bg-black  shadow-md z-10 hidden ">
                                     <!-- items-->
-                                    <div class="flex items-center justify-start gap-2 ">
-                                        <div
-                                            class="h-10 w-10 rounded-md bg-blue-500 flex justify-center items-center overflow-hidden">
-                                            <img class=" h-auto"
-                                                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d03b694a-498b-4c57-9479-ef53a71a21b7/df4256z-2f779d5b-7105-4ada-bc83-f4b476868b37.png/v1/fill/w_800,h_999,q_70,strp/luffy_gear_5_by_xavierjvg_df4256z-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU5NyIsInBhdGgiOiJcL2ZcL2QwM2I2OTRhLTQ5OGItNGM1Ny05NDc5LWVmNTNhNzFhMjFiN1wvZGY0MjU2ei0yZjc3OWQ1Yi03MTA1LTRhZGEtYmM4My1mNGI0NzY4NjhiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.vtmfhllHHeiVC7xZtV6Qsx8Wz6lHJr-XCIM-BSOGjh8"
-                                                alt="Profile Image">
+                                    <div class="flex flex-col gap-5">
+                                        <div class="flex items-center justify-start gap-2 ">
+                                            <div
+                                                class="h-10 w-10 rounded-md bg-blue-500 flex justify-center items-center overflow-hidden">
+                                                <img class=" h-auto"
+                                                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d03b694a-498b-4c57-9479-ef53a71a21b7/df4256z-2f779d5b-7105-4ada-bc83-f4b476868b37.png/v1/fill/w_800,h_999,q_70,strp/luffy_gear_5_by_xavierjvg_df4256z-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU5NyIsInBhdGgiOiJcL2ZcL2QwM2I2OTRhLTQ5OGItNGM1Ny05NDc5LWVmNTNhNzFhMjFiN1wvZGY0MjU2ei0yZjc3OWQ1Yi03MTA1LTRhZGEtYmM4My1mNGI0NzY4NjhiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.vtmfhllHHeiVC7xZtV6Qsx8Wz6lHJr-XCIM-BSOGjh8"
+                                                    alt="Profile Image">
+                                            </div>
+                                            <div class="flex flex-col justify-center">
+                                                <p class="text-sm opacity-70 ">plugin name</p>
+                                                <small class="text-xs opacity-50 ">category</small>
+                                            </div>
+    
                                         </div>
-                                        <div class="flex flex-col justify-center">
-                                            <p class="text-sm opacity-70 ">plugin name</p>
-                                            <small class="text-xs opacity-50 ">category</small>
+                                        <div class="flex items-center justify-start gap-2 ">
+                                            <div
+                                                class="h-10 w-10 rounded-md bg-blue-500 flex justify-center items-center overflow-hidden">
+                                                <img class=" h-auto"
+                                                    src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d03b694a-498b-4c57-9479-ef53a71a21b7/df4256z-2f779d5b-7105-4ada-bc83-f4b476868b37.png/v1/fill/w_800,h_999,q_70,strp/luffy_gear_5_by_xavierjvg_df4256z-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU5NyIsInBhdGgiOiJcL2ZcL2QwM2I2OTRhLTQ5OGItNGM1Ny05NDc5LWVmNTNhNzFhMjFiN1wvZGY0MjU2ei0yZjc3OWQ1Yi03MTA1LTRhZGEtYmM4My1mNGI0NzY4NjhiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.vtmfhllHHeiVC7xZtV6Qsx8Wz6lHJr-XCIM-BSOGjh8"
+                                                    alt="Profile Image">
+                                            </div>
+                                            <div class="flex flex-col justify-center">
+                                                <p class="text-sm opacity-70">plugin name</p>
+                                                <small class="text-xs opacity-50 ">category</small>
+                                            </div>
+    
                                         </div>
-
                                     </div>
-                                    <div class="flex items-center justify-start gap-2 ">
-                                        <div
-                                            class="h-10 w-10 rounded-md bg-blue-500 flex justify-center items-center overflow-hidden">
-                                            <img class=" h-auto"
-                                                src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d03b694a-498b-4c57-9479-ef53a71a21b7/df4256z-2f779d5b-7105-4ada-bc83-f4b476868b37.png/v1/fill/w_800,h_999,q_70,strp/luffy_gear_5_by_xavierjvg_df4256z-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTU5NyIsInBhdGgiOiJcL2ZcL2QwM2I2OTRhLTQ5OGItNGM1Ny05NDc5LWVmNTNhNzFhMjFiN1wvZGY0MjU2ei0yZjc3OWQ1Yi03MTA1LTRhZGEtYmM4My1mNGI0NzY4NjhiMzcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.vtmfhllHHeiVC7xZtV6Qsx8Wz6lHJr-XCIM-BSOGjh8"
-                                                alt="Profile Image">
-                                        </div>
-                                        <div class="flex flex-col justify-center">
-                                            <p class="text-sm opacity-70">plugin name</p>
-                                            <small class="text-xs opacity-50 ">category</small>
-                                        </div>
-
+                                    <div class="flex justify-center items-center text-sm opacity-50">
+                                        NO RESULT FOUND 
                                     </div>
 
                                 </div>
                             </div>
                         </div>
                     </form>
-                    <section class="carousel w-full h-[270px] bg-yellow-400    border border-yellow-800 ">
-                        <div class="w-full h-full overflow-x-scroll flex">
+                    <section class="carousel w-full h-[250px]  mt-1 ">
+                        <div class="w-full h-full  slider">
 
-                            <div class="slide bg-red-200 border border-black  h-[100%]">
+                            <div class="slide active bg-red-200 border border-black  h-[100%]">
                                 Slide 1
                             </div>
                             <div class="slide  bg-red-200 border border-black  h-full">
                                 Slide 2
                             </div>   
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 3
                             </div> 
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 4
                             </div> 
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 5
                             </div> 
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 6
                             </div> 
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 7
                             </div> 
                             <div class="slide  bg-red-200 border border-black  h-full">
-                                Slide 2
+                                Slide 8
                             </div> 
                             
                          
