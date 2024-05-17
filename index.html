@@ -20,7 +20,7 @@
         }
 
         .carousel-card {
-            min-width: calc(100% / 3);
+            min-width: calc(96% / 3);
             /* Show 3 cards at a time */
         }
     </style>
@@ -53,7 +53,7 @@
                                 alt="logo" />
                             <img src="assets/images/logo-light.svg"
                                 class="mx-auto light-logo h-8 logo hidden dark:block" alt="logo" />
-                            <img src="assets/images/logo-icon.svg" class="logo-icon h-8 mx-auto hidden" alt="">
+                            <img src="assets/images/logo-icon.svg" class="logo-icon h-8 mx-auto hidden" alt>
                         </a>
                     </div>
                     <div class="flex items-center gap-2.5 py-2.5 pe-2.5">
@@ -117,7 +117,8 @@
                                                 d="M17.9841 14.5084C18.092 14.4638 18.1985 14.4163 18.3033 14.3661C18.5951 14.2264 18.9256 14.1774 19.238 14.261L20.2342 14.5275C21.0193 14.7376 21.7376 14.0193 21.5275 13.2342L21.261 12.238C21.1774 11.9256 21.2264 11.595 21.3661 11.3033C21.7725 10.4545 22 9.50385 22 8.5C22 4.91015 19.0899 2 15.5 2C12.79 2 10.4673 3.6585 9.49158 6.0159C9.6597 6.00535 9.82924 6 10 6C14.4183 6 18 9.58172 18 14C18 14.1708 17.9947 14.3403 17.9841 14.5084Z"
                                                 fill="currentColor" />
                                         </svg>
-                                        <span class="pl-1.5">Social Apps</span>
+                                        <span class="pl-1.5">Social
+                                            Apps</span>
                                     </div>
                                     <div class="w-4 h-4 flex items-center justify-center dropdown-icon"
                                         :class="{'!rotate-180' : activeMenu === 'social'}">
@@ -153,7 +154,6 @@
                                 </a>
                             </li>
 
-
                         </ul>
 
                     </div>
@@ -185,7 +185,7 @@
                                 <div class="relative">
                                     <input type="text" id="search"
                                         class="form-input ps-10 h-[42px] dark:border-lightgray/20 dark:text-white dark:bg-lightgray/10 border-2 border-gray/10 bg-gray/[8%] rounded-full text-sm text-dark placeholder:text-lightgray/80 focus:ring-0 focus:border-primary/80 focus:outline-0"
-                                        placeholder="Search..." required="">
+                                        placeholder="Search..." required>
                                     <button type="button" class="absolute inset-y-0 left-3 flex items-center">
                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -196,9 +196,9 @@
                                                     stroke-width="2" stroke-linecap="round" />
                                             </g>
                                             <defs>
-                                                <clipPath id="clip0_87_857">
+                                                <clippath id="clip0_87_857">
                                                     <rect width="18" height="18" fill="white" />
-                                                </clipPath>
+                                                </clippath>
                                             </defs>
                                         </svg>
                                     </button>
@@ -301,8 +301,8 @@
                                         fill="currentColor" />
                                 </svg>
                             </button>
-                            <div class="noti-area space-y-[22px]" x-show="open" x-transition=""
-                                x-transition.duration.300ms="" style="display: none;">
+                            <div class="noti-area space-y-[22px]" x-show="open" x-transition x-transition.duration.300ms
+                                style="display: none;">
                                 <div class="flex items-center gap-2">
                                     <h4 class="font-semibold text-dark dark:text-white">Notifications</h4>
                                     <div x-data="{ dropdown: false}" class="dropdown ml-auto">
@@ -316,8 +316,8 @@
                                                 <circle cx="16" cy="2" r="2" fill="currentColor" />
                                             </svg>
                                         </a>
-                                        <ul x-show="dropdown" @click.away="dropdown = false" x-transition=""
-                                            x-transition.duration.300ms="" class="right-0 whitespace-nowrap">
+                                        <ul x-show="dropdown" @click.away="dropdown = false" x-transition
+                                            x-transition.duration.300ms class="right-0 whitespace-nowrap">
                                             <li><a href="javascript:;">All</a></li>
                                             <li><a href="javascript:;">Read</a></li>
                                             <li><a href="javascript:;">Unread</a></li>
@@ -369,9 +369,11 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="text-sm text-dark dark:text-white">You have a bug that needs
+                                                <p class="text-sm text-dark dark:text-white">You
+                                                    have a bug that needs
                                                 </p>
-                                                <p class="text-xs text-gray mt-0.5">Just now</p>
+                                                <p class="text-xs text-gray mt-0.5">Just
+                                                    now</p>
                                             </div>
                                         </a>
                                     </li>
@@ -387,8 +389,10 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="text-sm text-dark dark:text-white">New user registered</p>
-                                                <p class="text-xs text-gray mt-0.5">59 minutes ago</p>
+                                                <p class="text-sm text-dark dark:text-white">New
+                                                    user registered</p>
+                                                <p class="text-xs text-gray mt-0.5">59
+                                                    minutes ago</p>
                                             </div>
                                         </a>
                                     </li>
@@ -436,9 +440,11 @@
                                                 </svg>
                                             </div>
                                             <div>
-                                                <p class="text-sm text-dark dark:text-white">You have a bug that needs
+                                                <p class="text-sm text-dark dark:text-white">You
+                                                    have a bug that needs
                                                 </p>
-                                                <p class="text-xs text-gray mt-0.5">5 hours ago</p>
+                                                <p class="text-xs text-gray mt-0.5">5
+                                                    hours ago</p>
                                             </div>
                                         </a>
                                     </li>
@@ -456,7 +462,8 @@
                                     alt="Header Avatar">
                                 <div class="text-start">
                                     <div class="flex items-center gap-1">
-                                        <span class="hidden xl:block text-sm font-semibold">William Robbie</span>
+                                        <span class="hidden xl:block text-sm font-semibold">William
+                                            Robbie</span>
                                         <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -464,10 +471,11 @@
                                                 fill="currentColor" />
                                         </svg>
                                     </div>
-                                    <span class="hidden xl:block text-xs text-lightgray">CEO & Founder</span>
+                                    <span class="hidden xl:block text-xs text-lightgray">CEO
+                                        & Founder</span>
                                 </div>
                             </button>
-                            <ul x-show="open" x-transition="" x-transition.duration.300ms="" style="display: none;">
+                            <ul x-show="open" x-transition x-transition.duration.300ms style="display: none;">
                                 <li>
                                     <a href="javaScript:;" class="flex items-center gap-2">
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -552,15 +560,15 @@
                 {# start carts content #}
                 <!-- latest plugins -->
                 <div class="flex justify-between w-full">
-                    <div class="">
-                        <a href="#" class="text-black ml-2 font-bold font-italic text-3xl ">
-                            Latest Plugins
+                    <div class>
+                        <a href="#" class="text-black ml-2 font-bold font-italic text-3xl hover:underline">
+                            Latest Plugins >
                         </a>
                     </div>
                     <div class="mr-3">
-                        <button id="prevButton" class=" mt-4 px-3 py-1 bg-black text-white rounded-full z-10">
+                        <button id="prevButton" class=" mt-4  px-4 py-2 bg-black text-white  rounded-full z-10">
                             < </button>
-                                <button id="nextButton" class=" mt-4 px-3 py-1 bg-black text-white rounded-full z-10">
+                                <button id="nextButton" class=" mt-4 px-4 py-2 mr-3 bg-black text-white rounded-full z-10">
                                     >
                                 </button>
                     </div>
@@ -571,229 +579,637 @@
                     <div class="mt-4">
                         <div class="carousel-inner" id="carousel2">
                             <div
-                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] ml-3">
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
                                     <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh]" alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="pl-4 flex justify-between">
-<div class="">
-                                        <div class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
-                                            Plugin Title</div>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
                                             <h2 class="text-gray-400">4,5</h2>
-                                        <a href="#"
-                                            class="block mt-1 text-sm leading-tight  text-gray-400 ">Incredible
-                                            accommodation for your team</a>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
                                             <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div>
-                                        <button class="bg-blue-300 w-13 h-13">kokab</button>
-                                    </div>
-                                </div>
                                 </div>
                             </div>
 
-
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                            class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
-                            <div class="md:flex">
-                                <div class="w-[100px] mb-7 bg-gray-300">
-                                    <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                        class="h-[15vh] " alt="">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
+                                <div class="md:flex">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
+                                        <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            class="h-[15vh]" alt>
+                                    </div>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="p-8">
-                                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                        Company retreats</div>
-                                    <a href="#"
-                                        class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                        accommodation for your team</a>
+                            </div>
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
+                                <div class="md:flex">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
+                                        <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            class="h-[15vh]" alt>
+                                    </div>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                        class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
-                        <div class="md:flex">
-                            <div class="w-[100px] mb-7 bg-gray-300">
-                                <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                    class="h-[15vh] " alt="">
-                            </div>
-                            <div class="p-8">
-                                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                    Company retreats</div>
-                                <a href="#"
-                                    class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                    accommodation for your team</a>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
 
                         </div>
                     </div>
                     <div class=" mt-4">
                         <div class="carousel-inner carousel" id="carousel">
                             <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] ml-3">
-                                <div class="md:flex">
-                                    <div class="w-[100px]  mb-7 bg-gray-300">
-                                        <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                            class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
+                            <div class="md:flex">
+                                <div class="w-[100px]   mb-7 bg-gray-300">
+                                    <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        class="h-[15vh]" alt>
+                                </div>
+                                <div class="pl-4 flex justify-between w-full">
+                                    <div class="w-[60%]">
+                                        <div
+                                            class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                            Plugin Title </div>
+                                        <h2 class="text-gray-400">4,5</h2>
+                                        <p href="#"
+                                            class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                        <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="flex flex-col justify-between items-end h-[15vh]">
+                                        <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                            xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier">
+                                                <polygon style="fill:#5D9CEC;"
+                                                    points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                </polygon>
+                                                <g>
+                                                    <polygon style="fill:#F5F7FA;"
+                                                        points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                    </polygon>
+                                                    <polygon style="fill:#F5F7FA;"
+                                                        points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                    </polygon>
+                                                    <polygon style="fill:#F5F7FA;"
+                                                        points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                    </polygon>
+                                                </g>
+                                            </g>
+                                        </svg>
+
+                                        <div class="">
+                                            <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div
-                                class="carousel-card flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 w-[30%] mx-3">
+                             <div
+                                class="carousel-card hover:scale-105 flex-shrink-0 bg-white border border-gray-200 shadow-md overflow-hidden md:h-[18vh] p-2 sm:w-full md:w-[30%]  ml-3">
                                 <div class="md:flex">
-                                    <div class="w-[100px] mb-7 bg-gray-300">
+                                    <div class="w-[100px]   mb-7 bg-gray-300">
                                         <img src="https://plus.unsplash.com/premium_photo-1669749353925-b2d3a503cc43?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            class="h-[15vh] " alt="">
+                                            class="h-[15vh]" alt>
                                     </div>
-                                    <div class="p-8">
-                                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                                            Company retreats</div>
-                                        <a href="#"
-                                            class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Incredible
-                                            accommodation for your team</a>
+                                    <div class="pl-4 flex justify-between w-full">
+                                        <div class="w-[60%]">
+                                            <div
+                                                class="capitalize tracking-wide text-lg text-black font-bold hover:underline">
+                                                Plugin Title</div>
+                                            <h2 class="text-gray-400">4,5</h2>
+                                            <p href="#"
+                                                class="block mt-1 text-sm leading-tight  text-gray-400 ">description</p>
+                                            <h3 class="text-sm text-gray-300 mt-9">4.1k</h3>
+                                        </div>
+                                        <div class="flex flex-col justify-between items-end h-[15vh]">
+                                            <svg class="w-10 h-10" version="1.1" id="Layer_1"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 511.984 511.984"
+                                                xml:space="preserve" fill="#000000">
+                                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                                    stroke-linejoin="round"></g>
+                                                <g id="SVGRepo_iconCarrier">
+                                                    <polygon style="fill:#5D9CEC;"
+                                                        points="511.984,255.992 473.188,197.791 477.688,127.996 414.987,96.981 383.988,34.296 314.193,38.795 255.992,0 197.806,38.795 127.996,34.296 96.997,96.981 34.31,127.996 38.81,197.791 0,255.992 38.81,314.178 34.31,383.988 96.997,414.987 127.996,477.674 197.806,473.174 255.992,511.984 314.193,473.174 383.988,477.674 415.003,414.987 477.688,383.988 473.188,314.178 ">
+                                                    </polygon>
+                                                    <g>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="160.292,283.663 122.324,221.852 101.715,221.852 101.715,314.115 121.293,314.115 121.293,252.18 159.526,314.115 179.744,314.115 179.744,221.852 160.292,221.852 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="224.962,274.46 270.069,274.46 270.069,258.523 224.962,258.523 224.962,238.43 274.085,238.43 274.085,221.852 204.868,221.852 204.868,314.115 274.991,314.115 274.991,297.147 224.962,297.147 ">
+                                                        </polygon>
+                                                        <polygon style="fill:#F5F7FA;"
+                                                            points="390.331,221.852 375.035,285.35 359.083,221.852 340.036,221.852 323.833,284.569 309.068,221.852 288.71,221.852 313.209,314.115 333.817,314.115 349.364,251.133 365.177,314.115 385.394,314.115 410.284,221.852 ">
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <div class="">
+                                                <button class="w-25 rounded-md bg-black text-white text-xs p-2">Download now</button>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
 
                         </div>
                     </div>
                 </div>
 
 
+                <div class="mt-8">
+                    <a href="#" class="text-black ml-2 font-bold font-italic text-3xl hover:underline ">
+                         Plugins >
+                    </a>
+
+                    <div></div>
+                </div>
 
 
                 <!-- end latest plugins -->
