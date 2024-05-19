@@ -22,24 +22,26 @@
 <style>
 
 .slider {
-        display: flex;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        scroll-snap-type: x mandatory; /* Snap to each slide */
-    }
+    display: flex;
+    overflow-x: auto;
+   
+    transition: scroll 0.5s ease-in-out;
+    
+}
 
-    .slide {
-        width: 170px;
-        flex-shrink: 0; /* Prevent slides from shrinking */
-        scroll-snap-align: start; /* Ensure snapping to the start of each slide */
-        float:inline-end;
-        transition: width 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-        margin-right: 10px; /* Add some spacing between slides */
-    }
+.slide {
+    width: 170px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    transition: width 1s ease; /* Add transition for smooth width changes */
+}
 
-    .slide.active {
-        width: 600px !important;
-        background-color: aqua !important;
-    }
+.slide.active {
+    width: 600px !important;
+    background-color: aqua !important;
+    transition: width 1s ease; /* Add transition for smooth width changes */
+}
+
 </style>
 </head>
 
