@@ -10,21 +10,34 @@ search_plugin.addEventListener("input", function(event) {
 
 
 // handle the swiper transition 
+const carousel = document.querySelector(".carousel");
+const carouselFirstChild = carousel.querySelector(".slider");
+const slides = carousel.querySelectorAll(".slide");
+const element = slides[slides.length - 1];
+const styles = window.getComputedStyle(element);
+const  widthValue = element.offsetWidth ;
+const marginRight = parseInt(styles.marginRight);
+
 function startCarousel() {
 
-    let carousel = document.querySelector(".carousel");
-    let carouselFirstChild = carousel.querySelector(".slider");
-    let slides = carousel.querySelectorAll(".slide");
     let A_slides =  Array.from(slides);
     let currentIndex = 0; 
+    const screenWidth = window.innerWidth;
 
-    const lastSlide = A_slides[A_slides.length-1].cloneNode(true);
-    // A_slides.unshift(lastSlide);
-    carouselFirstChild.insertBefore(lastSlide, carouselFirstChild.firstChild);
-    
+    if (screenWidth >= 1026) {
+        const lastSlide = A_slides[A_slides.length-1].cloneNode(true);
+        carouselFirstChild.insertBefore(lastSlide, carouselFirstChild.firstChild);
+    } 
+
+    // let width;
+   
     function moveNext() {
-        
-        let width = currentIndex === 0 ? 170 : 180;
+        if(screenWidth >= 1026){
+
+            width = currentIndex === 0 ? widthValue : widthValue + marginRight;
+        }else{
+            width =  widthValue + marginRight;
+        }
 
         A_slides[currentIndex].classList.remove("active");
     
@@ -50,18 +63,18 @@ function startCarousel() {
     
     }
     
-    let intervalId = setInterval(moveNext, 3000); 
+    let intervalId = setInterval(moveNext, 7000); 
     
     carousel.addEventListener("mouseenter", function() {
         clearInterval(intervalId);
     });
     
     carousel.addEventListener("mouseleave", function() {
-        intervalId = setInterval(moveNext, 3000); 
+        intervalId = setInterval(moveNext, 7000); 
 
     });
 }
-
+if(slides.length > 1)
 document.addEventListener("DOMContentLoaded", startCarousel);
 
 
