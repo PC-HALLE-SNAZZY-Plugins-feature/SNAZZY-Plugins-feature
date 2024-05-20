@@ -11,7 +11,7 @@ search_plugin.addEventListener("input", function(event) {
 
 // handle the swiper transition 
 const duration = 7000;
-const carousel = document.querySelector(".carousel");
+const carousel = document.querySelector(".slides_carousel");
 const carouselFirstChild = carousel.querySelector(".slider");
 const slides = carousel.querySelectorAll(".slide");
 const element = slides[slides.length - 1];
@@ -25,12 +25,8 @@ function startCarousel() {
     let currentIndex = 0; 
     const screenWidth = window.innerWidth;
 
-    // if (screenWidth >= 1026) {
-    //     const lastSlide = A_slides[A_slides.length-1];
-    //     carouselFirstChild.insertBefore(lastSlide, carouselFirstChild.firstChild);
-    // } 
 
-    // let width;
+    let width;
    
     function moveNext() {
         if(screenWidth >= 1026){
@@ -78,21 +74,21 @@ function startCarousel() {
     
 
     scrollRightBtn.addEventListener("click", function() {
-        clearInterval(intervalId); 
+       
         moveNext()
-        intervalId = setInterval(moveNext, duration);
+       
     });
 
     scrollLeftBtn.addEventListener("click", function() {
-        clearInterval(intervalId); 
+      
         for(let i = 0 ; i<slides.length - 1;i++) {
             moveNext();
             
         }
-        intervalId = setInterval(moveNext, duration);
+      
     });
     carouselFirstChild.addEventListener('click', function(event) {
-        // clearInterval(intervalId); 
+       
 
         const clickedSlide = event.target.closest('.slide');
         if (clickedSlide) {
@@ -108,7 +104,7 @@ function startCarousel() {
            if(currentIndex > 1) carouselFirstChild.scrollLeft = width * 2;
            else  carouselFirstChild.scrollLeft =width* currentIndex ;
 
-            // intervalId = setInterval(moveNext, duration);
+          
 
         }
     });
