@@ -10,13 +10,14 @@ search_plugin.addEventListener("input", function(event) {
 
 
 // handle the swiper transition 
+const duration = 7000;
 const carousel = document.querySelector(".carousel");
 const carouselFirstChild = carousel.querySelector(".slider");
 const slides = carousel.querySelectorAll(".slide");
 const element = slides[slides.length - 1];
 const styles = window.getComputedStyle(element);
-const  widthValue = element.offsetWidth ;
-const marginRight = parseInt(styles.marginRight);
+let  widthValue = element.offsetWidth ;
+let marginRight = parseInt(styles.marginRight);
 
 function startCarousel() {
 
@@ -24,10 +25,10 @@ function startCarousel() {
     let currentIndex = 0; 
     const screenWidth = window.innerWidth;
 
-    if (screenWidth >= 1026) {
-        const lastSlide = A_slides[A_slides.length-1].cloneNode(true);
-        carouselFirstChild.insertBefore(lastSlide, carouselFirstChild.firstChild);
-    } 
+    // if (screenWidth >= 1026) {
+    //     const lastSlide = A_slides[A_slides.length-1];
+    //     carouselFirstChild.insertBefore(lastSlide, carouselFirstChild.firstChild);
+    // } 
 
     // let width;
    
@@ -38,7 +39,6 @@ function startCarousel() {
         }else{
             width =  widthValue + marginRight;
         }
-
         A_slides[currentIndex].classList.remove("active");
     
         carouselFirstChild.scrollLeft += width;
@@ -53,7 +53,7 @@ function startCarousel() {
             carouselFirstChild.scrollLeft += -width;
             A_slides.shift();
             currentIndex--;
-            console.log('A_slides',A_slides);
+            
             
         }
 
@@ -62,17 +62,57 @@ function startCarousel() {
         A_slides[currentIndex].classList.add("active");
     
     }
-    
-    let intervalId = setInterval(moveNext, 7000); 
+
+    let intervalId = setInterval(moveNext, duration); 
     
     carousel.addEventListener("mouseenter", function() {
         clearInterval(intervalId);
     });
     
     carousel.addEventListener("mouseleave", function() {
-        intervalId = setInterval(moveNext, 7000); 
-
+        intervalId = setInterval(moveNext, duration); 
+        
     });
+
+    const scrollRightBtn = document.getElementById("scrollRightBtn");
+    
+
+    scrollRightBtn.addEventListener("click", function() {
+        clearInterval(intervalId); 
+        moveNext()
+        intervalId = setInterval(moveNext, duration);
+    });
+
+    scrollLeftBtn.addEventListener("click", function() {
+        clearInterval(intervalId); 
+        for(let i = 0 ; i<slides.length - 1;i++) {
+            moveNext();
+            
+        }
+        intervalId = setInterval(moveNext, duration);
+    });
+    carouselFirstChild.addEventListener('click', function(event) {
+        // clearInterval(intervalId); 
+
+        const clickedSlide = event.target.closest('.slide');
+        if (clickedSlide) {
+            const index = Array.from(this.children).indexOf(clickedSlide);
+            let deff = (index - currentIndex ) > 0 ? (index - currentIndex ) : (slides.length  ) +(index - currentIndex);
+            console.log('deff',deff);
+            console.log('index',index);
+            console.log('currentIndex',currentIndex);
+
+            for(let i = 0 ; i<deff;i++) {
+                moveNext();
+            }
+           if(currentIndex > 1) carouselFirstChild.scrollLeft = width * 2;
+           else  carouselFirstChild.scrollLeft =width* currentIndex ;
+
+            // intervalId = setInterval(moveNext, duration);
+
+        }
+    });
+
 }
 if(slides.length > 1)
 document.addEventListener("DOMContentLoaded", startCarousel);

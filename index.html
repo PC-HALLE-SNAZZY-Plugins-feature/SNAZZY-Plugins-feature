@@ -48,7 +48,7 @@
             width: 100% !important;
             height: 100% !important;
             justify-content: space-between;
-            padding: 5% ;
+            padding: 5%;
 
         }
 
@@ -64,7 +64,7 @@
             width: 50%;
             height: fit-content;
             justify-content: center;
-            padding: 0% ;
+            padding: 0%;
 
         }
 
@@ -77,6 +77,17 @@
             .slide.active {
                 width: 100% !important;
 
+            }
+        }
+
+        .rightBtnSlide {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+
+            .carousel:hover .rightBtnSlide {
+                display: block !important;
             }
         }
     </style>
@@ -650,21 +661,31 @@
                             </div>
                         </div>
                     </form>
-                    <section class="carousel w-full h-[250px]  mt-1 ">
+                    <section class="carousel w-full relative h-[250px]  mt-1 ">
+
+                        <button id="scrollLeftBtn" class=" rightBtnSlide  absolute left-3 top-1/2 -translate-y-1/2 z-10 bg-gray-50 py-1 px-[2px] rounded-[4px]
+                         "><img src="assets/svg/slide-black-arraow.svg" alt=""></button>
+                        <button id="scrollRightBtn" class=" rightBtnSlide  absolute right-3 top-1/2 -translate-y-1/2 z-10 bg-gray-50 py-1 px-[2px] rounded-[4px]
+                         "><img src="assets/svg/slide-black-right-arraow.svg" alt=""></button>
+
                         <div class="w-full h-full  slider">
 
                             <div class=" active slide rounded-md shadow-lg h-[180px] flex  items-center bg-blue-200 justify-start ps-4 md:h-full overflow-hidden bg-center bg-cover  bg-no-repeat "
-                                style="background-image:  url(https://www.opfanpage.com/wp-content/uploads/2018/02/maxresdefault-3.jpg); 
+                                style="background-image:  url(https://www.opfanpagqqe.com/wp-content/uploads/2018/02/maxresdefault-3.jpg); 
                             border-image: fill 0 linear-gradient(#0003,#000);
                             ">
                                 <div class="slide-content flex flex-col w-1/2 gap-2">
                                     <h1 class="text-gray-50 font-semibold font-inter">hello plugin</h1>
-                                    <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 hyphens-auto">Lorem ipsum dolor sit
+                                    <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 hyphens-auto">Lorem
+                                        ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -721,10 +742,13 @@
                                     <h1 class="text-gray-50 font-semibold font-inter">hello plugin</h1>
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
-                                    <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                    <a href="inde.html"
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -771,7 +795,7 @@
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[1.35s]">
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
 
@@ -783,9 +807,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -843,9 +870,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -903,9 +933,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -963,9 +996,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -1023,9 +1059,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
@@ -1083,9 +1122,12 @@
                                     <p class="text-[9px] text-gray-50 leading-loose hidden w-1/2 ">Lorem ipsum dolor sit
                                         amet consectetur adipisicing elit. Lorem ipsum dolor sit amet</p>
                                     <button
-                                        class="group cursor-pointer relative cursor-default w-[80px] h-[25px] bg-[linear-gradient(144deg,_#af40ff,_#5b42f3_50%,_#00ddeb)] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
+                                        class="group cursor-pointer relative cursor-default w-[85px] h-[25px] bg-[#237F9C] text-white whitespace-nowrap flex flex-wrap rounded-md p-2 overflow-hidden">
                                         <span
-                                            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs">show
+                                            class="absolute left-2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none text-xs"><img
+                                                src="assets/svg/fluent_ios-arrow-regular.svg" alt=""></span>
+                                        <span
+                                            class="absolute left-[15px] top-1/2  -translate-y-1/2 z-10 pointer-events-none text-xs">show
                                             more</span>
                                         <div
                                             class="w-[10px] h-[10px] blur-[5px] bg-[rgb(30,41,59)] delay-[0.2s] duration-[0.4s] hover:bg-transparent hover:delay-0 hover:duration-0 group-focus:bg-transparent group-focus:delay-[2.8s]">
