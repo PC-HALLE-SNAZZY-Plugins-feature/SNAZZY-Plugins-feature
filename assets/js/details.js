@@ -28,6 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     setupImageLoad();
     setupStickyHeader();
@@ -116,6 +120,7 @@ document.getElementById('hidde-comments').addEventListener('click', function() {
     moreComment.classList.add('fade-out');
 
 });
+
 
 
 

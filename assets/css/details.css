@@ -2,7 +2,6 @@
   
 
    
-        /* Styles pour la carte normale */
         #plugin-container {
             background-size: 100% 30%;
             background-repeat: no-repeat;
@@ -49,29 +48,56 @@
         
        
         
-        .thumbnail:hover,
-        .thumbnail.active {
-            opacity: 1;
-        }
         
         .carousel {
             width: 500px;
-            height: 350px;
+            height: 320px;
             overflow: hidden;
             position: relative;
         }
         
-        .carousel-image {
+       
+        
+        .carousel-image.active {
+            left: 0;
+        }
+
+        
+       
+        
+        .carousel {
             width: 90%;
+            max-width: 500px;
+            overflow: hidden;
+            position: relative;
+            
+        }
+        
+        .carousel-image {
+            width: 100%;
             position: absolute;
             top: 0;
             left: 100%;
             transition: left 0.5s ease;
         }
         
-        .carousel-image.active {
-            left: 0;
+        
+        
+        .thumbnail {
+            width: 80px;
+            height: 60px;
+            flex-shrink: 0;
+           
+            cursor: pointer;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
         }
+        
+        .thumbnail:hover,
+        .thumbnail.active {
+            opacity: 1;
+        }
+        
     
 
        
