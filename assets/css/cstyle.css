@@ -31,11 +31,11 @@
 
 }
 
-.slide .slide-content button {
+.slide .slide-content a {
     align-self: flex-end;
 }
 
-.slide.active .slide-content button {
+.slide.active .slide-content a {
     align-self: flex-start;
 }
 
