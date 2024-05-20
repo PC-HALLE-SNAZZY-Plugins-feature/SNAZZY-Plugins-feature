@@ -1,0 +1,9 @@
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card {
+    min-width: calc(96% / 3);
+    /* Show 3 cards at a time */
+}
