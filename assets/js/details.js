@@ -1,11 +1,10 @@
-
-
-document.addEventListener('DOMContentLoaded', function() {
+//  handle the details images 
+document.addEventListener('DOMContentLoaded', function () {
     const thumbnails = document.querySelectorAll('.thumbnail');
     const carouselImages = document.querySelectorAll('.carousel-image');
 
     thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', function() {
+        thumbnail.addEventListener('click', function () {
             const index = this.getAttribute('data-index');
             updateCarousel(index);
         });
@@ -94,14 +93,14 @@ function setupStickyHeader() {
 
 let lessButton = document.getElementById('hidde-comments');
 let MoreButton = document.getElementById('see-more-comments');
-document.getElementById('see-more-comments').addEventListener('click', function() {
-    document.querySelectorAll('.moreComment').forEach(function(moreComment) {
-        if(moreComment.style.display == 'block'){
+document.getElementById('see-more-comments').addEventListener('click', function () {
+    document.querySelectorAll('.moreComment').forEach(function (moreComment) {
+        if (moreComment.style.display == 'block') {
             moreComment.style.display = 'none';
         }
-        else{
+        else {
             moreComment.style.display = 'block';
-            lessButton.style.display='block'
+            lessButton.style.display = 'block'
             moreComment.classList.add('fade-in');
         }
     });
@@ -109,11 +108,11 @@ document.getElementById('see-more-comments').addEventListener('click', function(
     lessButton.style.display = 'block';
 
 });
-document.getElementById('hidde-comments').addEventListener('click', function() {
-    document.querySelectorAll('.moreComment').forEach(function(moreComment) {
-       
-            moreComment.style.display = 'none';
-      
+document.getElementById('hidde-comments').addEventListener('click', function () {
+    document.querySelectorAll('.moreComment').forEach(function (moreComment) {
+
+        moreComment.style.display = 'none';
+
     });
     lessButton.style.display = 'none';
     MoreButton.style.display = 'block';
