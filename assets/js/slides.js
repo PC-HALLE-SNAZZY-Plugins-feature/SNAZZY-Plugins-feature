@@ -94,10 +94,7 @@ function startCarousel() {
         if (clickedSlide) {
             const index = Array.from(this.children).indexOf(clickedSlide);
             let deff = (index - currentIndex ) > 0 ? (index - currentIndex ) : (slides.length  ) +(index - currentIndex);
-            console.log('deff',deff);
-            console.log('index',index);
-            console.log('currentIndex',currentIndex);
-
+      
             for(let i = 0 ; i<deff;i++) {
                 moveNext();
             }
@@ -114,5 +111,25 @@ if(slides.length > 1)
 document.addEventListener("DOMContentLoaded", startCarousel);
 
 
+
+const last_plugins_carousel = document.getElementById('carousel');
+const nextButton = document.getElementById('nextButton');
+const prevButton = document.getElementById('prevButton');
+
+nextButton.addEventListener('click', () => {
+    const scrollAmount = last_plugins_carousel.clientWidth; // Change this value according to your needs
+    last_plugins_carousel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+});
+
+prevButton.addEventListener('click', () => {
+    const scrollAmount = -last_plugins_carousel.clientWidth; // Change this value according to your needs
+    last_plugins_carousel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+    });
+});
 
 
